@@ -1,0 +1,94 @@
+//Create User
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+   "name": "Agung Harwin N",
+   "email":"admin@gmail.com",
+   "password":"12345",
+   "confPassword":"12345",
+   "role":"admin" 
+}
+
+###
+//Get All Users
+GET http://localhost:5000/users
+
+###
+//Get Single User
+
+GET http://localhost:5000/users/2d692fe6-abca-4d21-bd98-de9f4becd41b
+
+###
+//Update User
+PATCH  http://localhost:5000/users/2d692fe6-abca-4d21-bd98-de9f4becd41b
+Content-Type: application/json
+
+{
+   "name":"widia Updated",
+   "email":"user@gmail.com",
+   "password":"",
+   "confPassword":"",
+   "role":"user" 
+}
+
+####
+//Delete User
+DELETE   http://localhost:5000/users/2d692fe6-abca-4d21-bd98-de9f4becd41b
+
+
+###
+//login user
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+   "email":"admin@gmail.com",
+   "password":"12345"
+}
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+   "email":"user@gmail.com",
+   "password":"12345"
+}
+
+###
+GET http://localhost:5000/me
+
+
+###
+DELETE http://localhost:5000/logout
+
+###
+//Get ALL PRODUCTS
+GET http://localhost:5000/products
+
+###
+//Get SINGLE PRODUCT
+GET http://localhost:5000/products/6f0b7d5c-a7c4-4596-adf8-1d56f1aeeea6  
+
+###
+//Post Data Product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+   "name": "Product 6",
+   "price":"999"
+}
+
+###
+//Post Data Product
+PATCH http://localhost:5000/products/8c5916d1-23e1-4634-9502-04bc69fcd08a
+Content-Type: application/json
+
+{
+   "name": "Product Updated",
+   "price":"777"
+}
+
+####
+DELETE http://localhost:5000/products/8c5916d1-23e1-4634-9502-04bc69fcd08a
