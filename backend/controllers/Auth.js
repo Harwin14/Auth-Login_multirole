@@ -30,7 +30,7 @@ export const Me = async (req, res) => {
     });
     if (!user) return res.status(404).json({ msg: "User Not Found!" });
     res.status(200).json(user);
-};
+}; 
 
 export const logOut = (req, res) => {
     req.session.destroy((err) => {

@@ -11,7 +11,7 @@ const Login = () => {
     const { user, isError, isSuccess, isLoading, message } = useSelector(
         (state) => state.auth
     );
-    useEffect(() => {
+    useEffect(() => { 
         if (user || isSuccess) {
             navigate("/dashboard");
         }
